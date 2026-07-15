@@ -1,126 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        header { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-        header img { border-radius: 50%; width: 120px; height: 120px; object-fit: cover; border: 3px solid #720303; margin-right: 24px; }
-        h1 { margin-bottom: 4px; }
-        h2 { margin-top: 32px; }
-        nav { margin-top: 16px; }
-        nav a { margin-right: 16px; color: #720303; text-decoration: none; font-weight: bold; }
-        section { margin-top: 32px; }
-        ul, ol { margin-left: 24px; }
-        footer { margin-top: 40px; text-align: center; color: #888; font-size: 0.95em; border-top: 1px solid #eee; padding-top: 16px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div style="display: flex; align-items: center; width: 100%;">
-                <img src="face.jpg" alt="Profile Photo">
-                <div>
-                    <h1>Hung Anh Ho</h1>
-                    <p><a href="https://hunghopomona.github.io/myResume/" target="_blank">Full online site</a></p>
-                    <p style="margin: 0; font-size: 1.1em;"> Web developer | Programmer | Graphic Designer | AI Enthusiast</p>
-                    <p style="margin: 4px 0 0 0; font-size: 0.98em; color: #555;">
-                        Garden Grove, CA | +1 (657) 431-9415 (Text first) | hunganhho@cpp.com | <a href="https://www.linkedin.com/in/hung-anh-ho-18a386259/" target="_blank">LinkedIn</a>
-                    </p>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hung Anh Ho | Resume</title>
+    <meta name="description" content="Modern resume website for Hung Anh Ho, featuring experience, projects, and contact details." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">Hung Anh Ho</div>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero">
+          <div class="reveal">
+            <p class="eyebrow">Web Developer • Programmer • AI Enthusiast</p>
+            <h1>Building thoughtful digital experiences with code, design, and creativity.</h1>
+            <p>
+              I’m a results-driven developer with experience in programming, creative problem-solving,
+              and hands-on project work across web development, research, and student leadership.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Get In Touch</a>
             </div>
-        </header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="./hobby/hobby.html">Hobbies</a>
-            <a href="https://github.com/jimmyhanh" target="_blank">GitHub</a>
-            <a href="#portfolio" id="portfolioBtn">Portfolio</a>
-        </nav>
-        <section>
-            <h2>Professional Summary</h2>
-            <p>Results-driven Programmer with hands-on experience in coding, data visualization, and artistry. 
-                Adept at transforming complex data into actionable insights to drive business growth. 
-                Strong team player with a passion for leveraging data to solve real-world problems.</p>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Bachelor of Science in Computer Science</strong>, Cal Poly Pomona, CA, expected 2026</li>
-                <li><strong>Associate of Science in Computer Science</strong>, Santa Ana College, CA, 2024</li>
+            <ul class="hero-highlights">
+              <li>Python</li>
+              <li>C/C++</li>
+              <li>HTML/CSS/JS</li>
+              <li>Data & Research</li>
             </ul>
+          </div>
+
+          <div class="hero-card reveal">
+            <img src="face.jpg" alt="Portrait of Hung Anh Ho" />
+            <div class="card-body">
+              <h2>Currently studying at Cal Poly Pomona</h2>
+              <p>Computer Science student focused on creating polished, practical web solutions.</p>
+            </div>
+          </div>
         </section>
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn), C, C++, SQL</li>
-                <li><strong>Business Tools:</strong> Microsoft Excel, Word, PowerPoint</li>
-            </ul>
+
+        <section class="section reveal" id="about">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <p>Creative, collaborative, and motivated by real-world impact.</p>
+          </div>
+          <div class="stats">
+            <div class="stat-card">
+              <div class="value">2+</div>
+              <div class="label">Years of hands-on project experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="value">10+</div>
+              <div class="label">Web and coding projects explored</div>
+            </div>
+            <div class="stat-card">
+              <div class="value">1</div>
+              <div class="label">Leadership role in student tech community</div>
+            </div>
+          </div>
         </section>
-        <section>
-            <h2>Work Experience</h2>
-            <ul>
-                <li>
-                    <strong>President</strong> – Santa Ana College Computer Science Club, CA <span style="float:right; color:#888;"> 2023</span>
-                    <ul>
-                        <li> Organized coding workshops and hackathon-style events to promote practical learning, enhance member engagement 
-                            and foster teamwork in real-world programming scenarios.</li>
-                        <li>Partnered with faculty to host guest lectures and coding sessions, offering members insights into emerging 
-                            technologies and career paths in the tech field.</li>
-                        <li>Maintained comprehensive knowledge of club activities and operations through detailed documentation of events,
-                            meetings, member participation, and organizational decisions to inform future planning.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Undergraduate Research</strong> – Cal State Fullerton <span style="float:right; color:#888;">Summer 2022</span>
-                    <ul>
-                        <li>Completed 8-week mentored research experience with Computer Science professor.</li>
-                        <li>Testing Machine learning project by Dr. Yu Bai research on identifying bone fractures using an artificial intelligent 
-                            model with Python, MIMIC-CXR, Pandas</li>
-                        <li>Setting up virtual environment using Anaconda 3 and professional datasets by Physio Net</li>
-                    </ul>
-                </li>
-            </ul>
+
+        <section class="section reveal" id="experience">
+          <div class="section-heading">
+            <h2>Experience</h2>
+            <p>Selected roles and achievements that shaped my growth.</p>
+          </div>
+          <div class="grid two-col">
+            <article class="card">
+              <h3>President, Computer Science Club</h3>
+              <p class="date">Santa Ana College • 2023</p>
+              <div class="tag-row">
+                <span class="tag">Leadership</span>
+                <span class="tag">Events</span>
+                <span class="tag">Community Building</span>
+              </div>
+              <ul>
+                <li>Organized coding workshops and hackathon-style events to improve technical engagement.</li>
+                <li>Partnered with faculty to host guest lectures and learning sessions.</li>
+                <li>Maintained documentation for club operations, events, and member activity.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Undergraduate Research Assistant</h3>
+              <p class="date">Cal State Fullerton • Summer 2022</p>
+              <div class="tag-row">
+                <span class="tag">Research</span>
+                <span class="tag">Python</span>
+                <span class="tag">AI</span>
+              </div>
+              <ul>
+                <li>Supported a machine learning project focused on medical image analysis.</li>
+                <li>Used Python and data tools to prepare datasets and evaluate experiments.</li>
+                <li>Built a reliable development environment using Anaconda and research datasets.</li>
+              </ul>
+            </article>
+          </div>
         </section>
-        <section>
-            <h2>Personal projects</h2>
-            <ol>
-                <li>Santa Ana College Computer Science Club, President 2023</li>
-                <li>Undergraduate Research, Cal State Fullerton, Summer 2022</li>
-                <li>Santa Ana College, Teaching Assistant, 2022-2024</li>
-            </ol>
+
+        <section class="section reveal" id="projects">
+          <div class="section-heading">
+            <h2>Featured Work</h2>
+            <p>Projects and learning exercises that showcase my growth.</p>
+          </div>
+          <div class="project-grid">
+            <article class="card project-card">
+              <img src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub project preview" />
+              <h3>Boston Dental Hub</h3>
+              <p class="meta">UI • Design • Web Project</p>
+              <p>Designed a polished, modern project concept that highlights a professional dental brand experience. Website by request of Dr.Seo</p>
+              <a class="link" href="https://example.com" target="_blank">View project →</a>
+            </article>
+            <article class="card project-card">
+              <img src="Projects/pomodoro.png" alt="Pomodoro productivity project preview" />
+              <h3>Pomodoro Timer</h3>
+              <p class="meta">Productivity • JavaScript • Focus</p>
+              <p>A full-featured Pomodoro Timer app built with Vanilla JavaScript, HTML, and Tailwind CSS. This app implements the Pomodoro Technique to help improve focus and productivity by breaking work into timed intervals.</p>
+              <a class="link" href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank">View project →</a>
+            </article>
+            <article class="card project-card">
+              <img src="Projects/untilted.png" alt="Untilted project preview" />
+              <h3>Untilted-Therapy app/h3>
+              <p class="meta">Creative • Branding • Concept</p>
+              <p>Therapy. AppCreated a modern visual concept that blends storytelling, layout, and a polished presentation style. Firebase, 
+                HTML, CSS, and JavaScript were used to create a responsive and interactive web experience.  
+              </p>
+              <a class="link" href="https://untilt.web.app" target="_blank">View project →</a>
+            </article>
+          </div>
         </section>
-        <section id="portfolio">
-            <h2>Portfolio: The Complete Web Development Course</h2>
-            <ul>
-                <li><a href="./hobby/hobby.html" target="_blank">Hobbies Page</a> - HTML & CSS basics</li>
-                <li><a href="./movie ranking/movieRanking.html" target="_blank">Movie Ranking Page</a> - Images, lists, and layout</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/2.4 Movie Ranking Project/index.html" target="_blank">Movie Ranking Project</a> - HTML lists and images</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/3.2 Anchor Elements/index.html" target="_blank">Anchor Elements Project</a> - Links and navigation</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/3.3 Image Elements/index.html" target="_blank">Image Elements Project</a> - Working with images</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/4.0 File Paths/Folder0/index.html" target="_blank">File Paths Project</a> - File structure and linking</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/4.0 File Paths/Folder0/solution.html" target="_blank">File Paths Solution</a> - Solution for file paths</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/5.3 CSS Selectors/index.html" target="_blank">CSS Selectors Project</a> - Styling with selectors</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/6.0 CSS Colors/index.html" target="_blank">CSS Colors Project</a> - Color styling</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/6.1+Font+Properties/index.html" target="_blank">Font Properties Project</a> - Font styling</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/6.1+Font+Properties/font-size.html" target="_blank">Font Size Example</a> - Font size demonstration</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/6.1+Font+Properties/font-family.html" target="_blank">Font Family Example</a> - Font family demonstration</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/6.3 CSS Box Model/index.html" target="_blank">CSS Box Model Project</a> - Box model concepts</li>
-                <li><a href="-The-Complete-Full-Stack-Web-Development-Bootcamp-main/7.3 CSS Flag Project/Vietnam.html" target="_blank">CSS Flag Project: Vietnam</a> - Advanced CSS layout</li>
-            </ul>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <h2>Skills</h2>
+            <p>Tools and areas I’m actively developing.</p>
+          </div>
+          <div class="grid two-col">
+            <article class="card">
+              <h3>Technical Skills</h3>
+              <ul>
+                <li>Programming: Python, C, C++, SQL</li>
+                <li>Web: HTML, CSS, JavaScript</li>
+                <li>Productivity: Excel, Word, PowerPoint</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Education</h3>
+              <ul>
+                <li>B.S. in Computer Science, Cal Poly Pomona, expected 2026</li>
+                <li>A.S. in Computer Science, Santa Ana College, 2024</li>
+              </ul>
+            </article>
+          </div>
         </section>
-        <section>
-            <h2>Languages</h2>
-            <ul>
-                <li>English (Fluent)</li>
-                <li>Vietnamese (Native)</li>
-            </ul>
+
+        <section class="section reveal" id="contact">
+          <div class="contact-card">
+            <div>
+              <h3>Let’s connect.</h3>
+              <p>Open to opportunities, collaborations, and new creative projects.</p>
+            </div>
+            <div class="contact-links">
+              <a class="btn btn-secondary" href="mailto:hunganhho@cpp.com">Email Me</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/hung-anh-ho-18a386259/" target="_blank">LinkedIn</a>
+              <a class="btn btn-secondary" href="https://github.com/jimmyhanh" target="_blank">GitHub</a>
+            </div>
+          </div>
         </section>
-        <footer>
-            &copy; 2025 Hung Anh Ho. All rights reserved.
-        </footer>
-    </div>
-</body>
+      </div>
+    </main>
+
+    <footer class="footer">
+      © 2026 Hung Anh Ho. Built with HTML, CSS, and a modern layout approach.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
