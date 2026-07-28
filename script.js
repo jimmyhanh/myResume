@@ -14,11 +14,18 @@ function createCats() {
   const catsContainer = document.querySelector('.cats-container');
   if (!catsContainer) return;
 
+  // Add memorial text
+  const text = document.createElement('div');
+  text.className = 'cat-memorial';
+  text.textContent = 'In loving Memory Kuro';
+  catsContainer.appendChild(text);
+
+  // Add cat image
   const cat = document.createElement('div');
   cat.className = 'cat';
   const img = document.createElement('img');
   img.src = 'cat icon.png';
-  img.alt = 'Animated cat';
+  img.alt = 'Kuro';
   img.style.width = '100%';
   img.style.height = '100%';
   img.style.objectFit = 'contain';
