@@ -3,16 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hung Anh Ho | Resume</title>
-    <meta name="description" content="Modern resume website for Hung Anh Ho, featuring experience, projects, and contact details." />
+    <title>Hung Anh Ho | Portfolio</title>
+    <meta
+      name="description"
+      content="Modern portfolio website for Hung Anh Ho, featuring experience, projects, and contact details."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
     <header class="site-header">
-      <div class="brand">Hung Anh Ho</div>
+      <a class="brand" href="#hero">Hung Anh Ho</a>
       <nav class="site-nav">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -20,158 +25,162 @@
 
     <main>
       <div class="container">
-        <section class="hero">
-          <div class="reveal">
-            <p class="eyebrow">Web Developer • Programmer • AI Enthusiast</p>
-            <h1>Building thoughtful digital experiences with code, design, and creativity.</h1>
-            <p>
-              I’m a results-driven developer with experience in programming, creative problem-solving,
-              and hands-on project work across web development, research, and student leadership.
+        <section class="hero section" id="hero">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Hello! I am</p>
+            <h1 class="gradient-text">Hung Anh Ho</h1>
+            <div class="expertise-row">
+              <span>Web Developer</span>
+              <span class="dot"></span>
+              <span>Programmer</span>
+              <span class="dot"></span>
+              <span>AI Enthusiast</span>
+            </div>
+            <p class="hero-lead">
+              I’m a results-driven developer building polished digital experiences with code,
+              design, and thoughtful problem-solving across web development and research.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects">View Projects</a>
               <a class="btn btn-secondary" href="#contact">Get In Touch</a>
             </div>
-            <ul class="hero-highlights">
-              <li>Python</li>
-              <li>C/C++</li>
-              <li>HTML/CSS/JS</li>
-              <li>Data & Research</li>
-            </ul>
-          </div>
-
-          <div class="hero-card reveal">
-            <img src="face.jpg" alt="Portrait of Hung Anh Ho" />
-            <div class="card-body">
-              <h2>Currently studying at Cal Poly Pomona</h2>
-              <p>Computer Science student focused on creating polished, practical web solutions.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal" id="about">
-          <div class="section-heading">
-            <h2>About Me</h2>
-            <p>Creative, collaborative, and motivated by real-world impact.</p>
-          </div>
-          <div class="stats">
-            <div class="stat-card">
-              <div class="value">2+</div>
-              <div class="label">Years of hands-on project experience</div>
-            </div>
-            <div class="stat-card">
-              <div class="value">10+</div>
-              <div class="label">Web and coding projects explored</div>
-            </div>
-            <div class="stat-card">
-              <div class="value">1</div>
-              <div class="label">Leadership role in student tech community</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal" id="experience">
-          <div class="section-heading">
-            <h2>Experience</h2>
-            <p>Selected roles and achievements that shaped my growth.</p>
-          </div>
-          <div class="grid two-col">
-            <article class="card">
-              <h3>President, Computer Science Club</h3>
-              <p class="date">Santa Ana College • 2023</p>
-              <div class="tag-row">
-                <span class="tag">Leadership</span>
-                <span class="tag">Events</span>
-                <span class="tag">Community Building</span>
+            <div class="hero-stats">
+              <div>
+                <strong>2+</strong>
+                <span>Years building</span>
               </div>
+              <div>
+                <strong>10+</strong>
+                <span>Projects explored</span>
+              </div>
+              <div>
+                <strong>1</strong>
+                <span>Leadership role</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-pipeline" aria-hidden="true">
+              <div class="content--canvas"></div>
+            </div>
+            <div class="hero-blob"></div>
+            <img src="face.jpg" alt="Portrait of Hung Anh Ho" />
+            <div class="hero-floating-card">
+              <p>Currently studying at</p>
+              <strong>Cal Poly Pomona</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About my</p>
+            <h2 class="gradient-text">From curiosity to real-world product building.</h2>
+          </div>
+          <div class="about-grid">
+            <article class="about-card reveal">
+              <h3>Past</h3>
+              <p>
+                I discovered my passion for programming early and grew from hobby projects into
+                serious web development work that combines creativity with practical outcomes.
+              </p>
+            </article>
+            <article class="about-card reveal">
+              <h3>Present</h3>
+              <p>
+                I’m focused on building responsive, user-friendly web experiences while exploring
+                AI tools, design systems, and research-backed problem solving.
+              </p>
+            </article>
+            <article class="about-card reveal">
+              <h3>Focus</h3>
+              <p>
+                I enjoy creating polished interfaces, developing clean frontend logic, and turning
+                ideas into real-world projects with clear impact.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="skills">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2 class="gradient-text">Core tools and disciplines I use every day.</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skills-card reveal">
+              <h3>Technical</h3>
               <ul>
-                <li>Organized coding workshops and hackathon-style events to improve technical engagement.</li>
-                <li>Partnered with faculty to host guest lectures and learning sessions.</li>
-                <li>Maintained documentation for club operations, events, and member activity.</li>
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>SQL</li>
+                <li>HTML, CSS, JavaScript</li>
               </ul>
             </article>
-
-            <article class="card">
-              <h3>Undergraduate Research Assistant</h3>
-              <p class="date">Cal State Fullerton • Summer 2022</p>
+            <article class="skills-card reveal">
+              <h3>Focus areas</h3>
               <div class="tag-row">
+                <span class="tag">Web Development</span>
+                <span class="tag">UI Design</span>
                 <span class="tag">Research</span>
-                <span class="tag">Python</span>
+                <span class="tag">Leadership</span>
                 <span class="tag">AI</span>
               </div>
-              <ul>
-                <li>Supported a machine learning project focused on medical image analysis.</li>
-                <li>Used Python and data tools to prepare datasets and evaluate experiments.</li>
-                <li>Built a reliable development environment using Anaconda and research datasets.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal" id="projects">
-          <div class="section-heading">
-            <h2>Featured Work</h2>
-            <p>Projects and learning exercises that showcase my growth.</p>
-          </div>
-          <div class="project-grid">
-            <article class="card project-card">
-              <img src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub project preview" />
-              <h3>Boston Dental Hub</h3>
-              <p class="meta">UI • Design • Web Project</p>
-              <p>Designed a polished, modern project concept that highlights a professional dental brand experience. Website by request of Dr.Seo</p>
-              <a class="link" href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank">View project →</a>
-            </article>
-            <article class="card project-card">
-              <img src="Projects/pomodoro.png" alt="Pomodoro productivity project preview" />
-              <h3>Pomodoro Timer</h3>
-              <p class="meta">Productivity • JavaScript • Focus</p>
-              <p>A full-featured Pomodoro Timer app built with Vanilla JavaScript, HTML, and Tailwind CSS. This app implements the Pomodoro Technique to help improve focus and productivity by breaking work into timed intervals.</p>
-              <a class="link" href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank">View project →</a>
-            </article>
-            <article class="card project-card">
-              <img src="Projects/untilted.png" alt="Untilted project preview" />
-              <h3>Untilted-Therapy app/h3>
-              <p class="meta">Creative • Branding • Concept</p>
-              <p>Therapy. AppCreated a modern visual concept that blends storytelling, layout, and a polished presentation style. Firebase, 
-                HTML, CSS, and JavaScript were used to create a responsive and interactive web experience.  
+              <p>
+                I’m actively developing my skills in front-end engineering, design-minded web builds,
+                and data-driven problem solving.
               </p>
-              <a class="link" href="https://untilt.web.app" target="_blank">View project →</a>
             </article>
           </div>
         </section>
 
-        <section class="section reveal">
-          <div class="section-heading">
-            <h2>Skills</h2>
-            <p>Tools and areas I’m actively developing.</p>
+        <section class="section" id="projects">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2 class="gradient-text">Selected work that reflects my growth and interests.</h2>
           </div>
-          <div class="grid two-col">
-            <article class="card">
-              <h3>Technical Skills</h3>
-              <ul>
-                <li>Programming: Python, C, C++, SQL</li>
-                <li>Web: HTML, CSS, JavaScript</li>
-                <li>Productivity: Excel, Word, PowerPoint</li>
-              </ul>
+          <div class="project-list">
+            <article class="project-card reveal">
+              <img src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub preview" />
+              <div class="project-copy">
+                <div class="project-meta">UI • Design • Web Project</div>
+                <h3>Boston Dental Hub</h3>
+                <p>Designed a polished, modern concept for a professional dental brand experience.</p>
+                <a href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank">View project</a>
+              </div>
             </article>
-            <article class="card">
-              <h3>Education</h3>
-              <ul>
-                <li>B.S. in Computer Science, Cal Poly Pomona, expected 2026</li>
-                <li>A.S. in Computer Science, Santa Ana College, 2024</li>
-              </ul>
+
+            <article class="project-card reveal">
+              <img src="Projects/pomodoro.png" alt="Pomodoro preview" />
+              <div class="project-copy">
+                <div class="project-meta">Productivity • JavaScript • Focus</div>
+                <h3>Pomodoro Timer</h3>
+                <p>A full-featured productivity app built with vanilla JavaScript and a clean UI.</p>
+                <a href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank">View project</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img src="Projects/untilted.png" alt="Untilted preview" />
+              <div class="project-copy">
+                <div class="project-meta">Creative • Branding • Concept</div>
+                <h3>Untilted Therapy App</h3>
+                <p>A wellness-focused concept built with responsive layout, interaction, and story-driven design.</p>
+                <a href="https://untilt.web.app" target="_blank">View project</a>
+              </div>
             </article>
           </div>
         </section>
 
-        <section class="section reveal" id="contact">
-          <div class="contact-card">
+        <section class="section" id="contact">
+          <div class="contact-card reveal">
             <div>
-              <h3>Let’s connect.</h3>
-              <p>Open to opportunities, collaborations, and new creative projects.</p>
+              <p class="eyebrow">Let’s build something together</p>
+              <h2 class="gradient-text">Open to opportunities, collaborations, and new creative projects.</h2>
             </div>
             <div class="contact-links">
-              <a class="btn btn-secondary" href="mailto:hunganhho@cpp.com">Email Me</a>
+              <a class="btn btn-secondary" href="mailto:hunganhho@cpp.com">Email</a>
               <a class="btn btn-secondary" href="https://www.linkedin.com/in/hung-anh-ho-18a386259/" target="_blank">LinkedIn</a>
               <a class="btn btn-secondary" href="https://github.com/jimmyhanh" target="_blank">GitHub</a>
             </div>
@@ -180,9 +189,7 @@
       </div>
     </main>
 
-    <footer class="footer">
-      © 2026 Hung Anh Ho. Built with HTML, CSS, and a modern layout approach.
-    </footer>
+    <footer class="footer">© 2026 Hung Anh Ho. Built with HTML, CSS, and a modern layout approach.</footer>
 
     <script src="script.js"></script>
   </body>
