@@ -8,10 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="page-intro.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script type="module" src="cat-banner.js"></script>
+    <script type="module" src="project-phone.js"></script>
   </head>
   <body>
+    <div class="page-intro" hidden aria-label="Portfolio introduction">
+      <div class="intro-top"><span>HUNG ANH HO</span><span>PORTFOLIO / 2026</span></div>
+      <div class="intro-center">
+        <div class="intro-monogram" aria-hidden="true">hh<span>.</span></div>
+        <p class="intro-status" role="status">Preparing the experience</p>
+        <div class="intro-track" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="intro-bottom"><span>CODE. DESIGN. CURIOSITY.</span><button class="intro-skip" type="button">Skip intro &#8599;</button></div>
+    </div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Hung Anh Ho, home">hh<span>®</span></a>
@@ -25,39 +37,87 @@
     </header>
     <main id="main">
       <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-frame">
         <div class="hero-kicker"><span>Hung Anh Ho</span><span>Developer / Programmer / AI enthusiast</span></div>
-        <h1 id="hero-title">CREATIVE<br /><span class="hero-second">DEVELOPER<span class="period">.</span></span></h1>
+        <h1 id="hero-title" aria-label="Creative developer"><span class="hero-title-motion" aria-hidden="true"><span class="hero-changing-word">CREATIVE</span> <span class="hero-title-static">DEVELOPER<span class="period">.</span></span></span></h1>
+        <div class="cat-stage" role="img" aria-label="A floating cat with a yarn ball, toy mouse, food bowl, and waving lucky-cat statue, changing coats as you scroll">
+          <img class="cat-fallback" src="cat icon.png" alt="" />
+          <canvas id="cat-canvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="cat-toolbar" hidden>
+          <span class="cat-name">01 / BLACK CAT</span>
+          <span class="cat-instruction">Scroll to meet the others</span>
+          <button class="cat-pause" type="button" aria-pressed="false">Pause motion</button>
+        </div>
         <div class="hero-bottom">
           <p>Thoughtful design.<br />Brought to life with code.</p>
           <a class="explore" href="#projects" aria-label="Explore selected work"><span>Explore</span><span aria-hidden="true">↓</span></a>
           <p class="hero-note">Selected work<br /><span>Web development & UI design</span></p>
         </div>
+        </div>
       </section>
       <section class="work-section" id="projects" aria-labelledby="work-title">
         <div class="section-label"><h2 id="work-title">Selected work</h2><span>(01—03)</span></div>
-        <article class="project project-dental">
-          <a class="project-image" href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer" aria-label="Open Boston Dental Hub (new tab)">
-            <img src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub website design" fetchpriority="high" />
-            <span class="project-open" aria-hidden="true">↗</span>
-          </a>
-          <div class="project-caption"><span class="project-number">01 /</span><div><h3><a href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer">Boston Dental Hub ↗</a></h3><p>A modern web experience for a professional dental brand.</p></div><span class="project-category">UI design · Web development</span></div>
+        <article class="project project-untilted featured-project">
+          <div class="project-showcase">
+            <img class="showcase-backdrop" src="Projects/untilted.png" alt="" loading="lazy" />
+            <div class="showcase-copy">
+              <p class="showcase-brand">Untilted<span aria-hidden="true">.</span></p>
+              <h3>A little space<br />to feel <em>better.</em></h3>
+              <p class="showcase-description">A thoughtful digital space for your mental wellness journey.</p>
+              <p class="showcase-tags">WEB APP &nbsp; / &nbsp; WELLNESS</p>
+              <a class="showcase-link" href="https://untilt.web.app" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">&#8599;</span></a>
+            </div>
+            <a class="phone-preview" data-project="untilted" href="https://untilt.web.app" target="_blank" rel="noopener noreferrer" aria-label="Explore Untilted Therapy App (opens in a new tab)">
+              <img class="phone-fallback" src="Projects/untilted.png" alt="Untilted Therapy website preview" loading="lazy" />
+              <canvas id="project-phone" role="img" aria-label="Angled 3D phone showing a mobile adaptation of Untilted's homepage"></canvas>
+              <span class="phone-preview-label">UNTILTED / MOBILE PREVIEW <span aria-hidden="true">&#8599;</span></span>
+            </a>
+          </div>
+          <div class="project-caption"><span class="project-number">01 /</span><div><h3><a href="https://untilt.web.app" target="_blank" rel="noopener noreferrer">Untilted Therapy App &#8599;</a></h3><p>A thoughtful digital space for wellness.</p></div><span class="project-category">Responsive design &middot; Wellness</span></div>
         </article>
-        <div class="project-grid">
-          <article class="project project-pomodoro">
-            <a class="project-image" href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer" aria-label="Open Pomodoro Timer (new tab)"><img src="Projects/pomodoro.png" alt="Pomodoro Timer productivity app interface" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></a>
-            <div class="project-caption"><span class="project-number">02 /</span><div><h3><a href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer">Pomodoro Timer ↗</a></h3><p>A little structure. A lot more focus.</p><span class="project-category">JavaScript · Productivity</span></div></div>
-          </article>
-          <article class="project project-untilted">
-            <a class="project-image" href="https://untilt.web.app" target="_blank" rel="noopener noreferrer" aria-label="Open Untilted Therapy App (new tab)"><img src="Projects/untilted.png" alt="Untilted Therapy App wellness interface" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></a>
-            <div class="project-caption"><span class="project-number">03 /</span><div><h3><a href="https://untilt.web.app" target="_blank" rel="noopener noreferrer">Untilted Therapy App ↗</a></h3><p>A thoughtful digital space for wellness.</p><span class="project-category">Responsive design · Wellness</span></div></div>
-          </article>
-        </div>
+        <article class="project project-dental featured-project">
+          <div class="project-showcase">
+            <img class="showcase-backdrop" src="Projects/Boston Dental Hub.png" alt="" loading="lazy" />
+            <div class="showcase-copy">
+              <p class="showcase-brand">Boston Dental Hub<span aria-hidden="true">.</span></p>
+              <h3>Care that makes<br />you <em>smile.</em></h3>
+              <p class="showcase-description">A modern web experience for a professional dental brand.</p>
+              <p class="showcase-tags">WEB DESIGN &nbsp; / &nbsp; HEALTHCARE</p>
+              <a class="showcase-link" href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">&#8599;</span></a>
+            </div>
+            <a class="phone-preview" data-project="dental" href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer" aria-label="Explore Boston Dental Hub (opens in a new tab)">
+              <img class="phone-fallback" src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub website preview" loading="lazy" />
+              <canvas id="project-phone-dental" role="img" aria-label="Angled 3D phone showing a mobile adaptation of Boston Dental Hub"></canvas>
+              <span class="phone-preview-label">BOSTON DENTAL HUB / MOBILE PREVIEW <span aria-hidden="true">&#8599;</span></span>
+            </a>
+          </div>
+          <div class="project-caption"><span class="project-number">02 /</span><div><h3><a href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer">Boston Dental Hub &#8599;</a></h3><p>A modern web experience for a professional dental brand.</p></div><span class="project-category">UI design &middot; Web development</span></div>
+        </article>
+        <article class="project project-pomodoro featured-project">
+          <div class="project-showcase">
+            <img class="showcase-backdrop" src="Projects/pomodoro.png" alt="" loading="lazy" />
+            <div class="showcase-copy">
+              <p class="showcase-brand">Pomodoro Timer<span aria-hidden="true">.</span></p>
+              <h3>A little structure.<br />A lot more <em>focus.</em></h3>
+              <p class="showcase-description">A simple productivity app that makes room for focused work and better breaks.</p>
+              <p class="showcase-tags">JAVASCRIPT &nbsp; / &nbsp; PRODUCTIVITY</p>
+              <a class="showcase-link" href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">&#8599;</span></a>
+            </div>
+            <a class="phone-preview" data-project="pomodoro" href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer" aria-label="Explore Pomodoro Timer (opens in a new tab)">
+              <img class="phone-fallback" src="Projects/pomodoro.png" alt="Pomodoro Timer website preview" loading="lazy" />
+              <canvas id="project-phone-pomodoro" role="img" aria-label="Angled 3D phone showing a mobile adaptation of Pomodoro Timer"></canvas>
+              <span class="phone-preview-label">POMODORO TIMER / MOBILE PREVIEW <span aria-hidden="true">&#8599;</span></span>
+            </a>
+          </div>
+          <div class="project-caption"><span class="project-number">03 /</span><div><h3><a href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer">Pomodoro Timer &#8599;</a></h3><p>A simple productivity app that makes room for focused work and better breaks.</p></div><span class="project-category">JavaScript &middot; Productivity</span></div>
+        </article>
       </section>
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="section-label"><h2 id="about-title">A little about me</h2><span>(04)</span></div>
         <div class="about-layout">
           <div class="portrait"><img src="face.jpg" alt="Portrait of Hung Anh Ho" loading="lazy" /><span>Hung Anh Ho / Cal Poly Pomona</span></div>
-          <div class="about-copy"><h3>CURIOUS MIND.<br />HANDS-ON BUILDER.</h3><p>I’m Hung Anh Ho, a developer studying at Cal Poly Pomona. I build digital experiences that bring together code, design, and thoughtful problem-solving.</p><p>What started with hobby projects has grown into a focus on responsive websites, clean frontend logic, and research-backed ideas. Lately, I’m exploring AI tools and how they can help turn a good idea into something useful.</p><div class="stats"><div><strong>2+</strong><span>Years building</span></div><div><strong>10+</strong><span>Projects explored</span></div><div><strong>1</strong><span>Leadership role</span></div></div></div>
+          <div class="about-copy"><h3>CURIOUS MIND.<br />HANDS-ON BUILDER.</h3><p>I’m Hung Anh Ho, a developer studying at Cal Poly Pomona. I build digital experiences that bring together code, design, and thoughtful problem-solving.</p><p>What started with hobby projects has grown into a focus on responsive websites, clean frontend logic, and research-backed ideas. Lately, I’m exploring AI tools and how they can help turn a good idea into something useful.</p><div class="stats"><div><strong>4+</strong><span>Years building</span></div><div><strong>30+</strong><span>Projects explored</span></div><div><strong>1</strong><span>Leadership role</span></div></div></div>
         </div>
       </section>
       <section class="skills-section" id="skills" aria-labelledby="skills-title">
