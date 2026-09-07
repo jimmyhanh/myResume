@@ -3,190 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hung Anh Ho | Portfolio</title>
-    <meta
-      name="description"
-      content="Modern portfolio website for Hung Anh Ho, featuring experience, projects, and contact details."
-    />
+    <title>Hung Anh Ho — Developer & Creative Thinker</title>
+    <meta name="description" content="Selected web development and UI design projects by Hung Anh Ho, a programmer and AI enthusiast at Cal Poly Pomona." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <nav class="top-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <main>
-      <div class="container">
-        <section class="hero section" id="hero">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Hello! I am</p>
-            <h1 class="gradient-text">Hung Anh Ho</h1>
-            <div class="expertise-row">
-              <span>Web Developer</span>
-              <span class="dot"></span>
-              <span>Programmer</span>
-              <span class="dot"></span>
-              <span>AI Enthusiast</span>
-            </div>
-            <p class="hero-lead">
-              I’m a results-driven developer building polished digital experiences with code,
-              design, and thoughtful problem-solving across web development and research.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">View Projects</a>
-              <a class="btn btn-secondary" href="#contact">Get In Touch</a>
-            </div>
-            <div class="hero-stats">
-              <div>
-                <strong>2+</strong>
-                <span>Years building</span>
-              </div>
-              <div>
-                <strong>10+</strong>
-                <span>Projects explored</span>
-              </div>
-              <div>
-                <strong>1</strong>
-                <span>Leadership role</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-visual reveal">
-            <div class="hero-blob"></div>
-            <img src="face.jpg" alt="Portrait of Hung Anh Ho" />
-            <div class="hero-floating-card">
-              <p>Currently studying at</p>
-              <strong>Cal Poly Pomona</strong>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="about">
-          <div class="section-heading reveal">
-            <p class="eyebrow">About my</p>
-            <h2 class="gradient-text">From curiosity to real-world product building.</h2>
-          </div>
-          <div class="about-grid">
-            <article class="about-card reveal">
-              <h3>Past</h3>
-              <p>
-                I discovered my passion for programming early and grew from hobby projects into
-                serious web development work that combines creativity with practical outcomes.
-              </p>
-            </article>
-            <article class="about-card reveal">
-              <h3>Present</h3>
-              <p>
-                I’m focused on building responsive, user-friendly web experiences while exploring
-                AI tools, design systems, and research-backed problem solving.
-              </p>
-            </article>
-            <article class="about-card reveal">
-              <h3>Focus</h3>
-              <p>
-                I enjoy creating polished interfaces, developing clean frontend logic, and turning
-                ideas into real-world projects with clear impact.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="skills">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Skills</p>
-            <h2 class="gradient-text">Core tools and disciplines I use every day.</h2>
-          </div>
-          <div class="skills-grid">
-            <article class="skills-card reveal">
-              <h3>Technical</h3>
-              <ul>
-                <li>Python</li>
-                <li>C/C++</li>
-                <li>SQL</li>
-                <li>HTML, CSS, JavaScript</li>
-              </ul>
-            </article>
-            <article class="skills-card reveal">
-              <h3>Focus areas</h3>
-              <div class="tag-row">
-                <span class="tag">Web Development</span>
-                <span class="tag">UI Design</span>
-                <span class="tag">Research</span>
-                <span class="tag">Leadership</span>
-                <span class="tag">AI</span>
-              </div>
-              <p>
-                I’m actively developing my skills in front-end engineering, design-minded web builds,
-                and data-driven problem solving.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="projects">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Projects</p>
-            <h2 class="gradient-text">Selected work that reflects my growth and interests.</h2>
-          </div>
-          <div class="project-list">
-            <article class="project-card reveal">
-              <img src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub preview" />
-              <div class="project-copy">
-                <div class="project-meta">UI • Design • Web Project</div>
-                <h3>Boston Dental Hub</h3>
-                <p>Designed a polished, modern concept for a professional dental brand experience.</p>
-                <a href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank">View project</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <img src="Projects/pomodoro.png" alt="Pomodoro preview" />
-              <div class="project-copy">
-                <div class="project-meta">Productivity • JavaScript • Focus</div>
-                <h3>Pomodoro Timer</h3>
-                <p>A full-featured productivity app built with vanilla JavaScript and a clean UI.</p>
-                <a href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank">View project</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <img src="Projects/untilted.png" alt="Untilted preview" />
-              <div class="project-copy">
-                <div class="project-meta">Creative • Branding • Concept</div>
-                <h3>Untilted Therapy App</h3>
-                <p>A wellness-focused concept built with responsive layout, interaction, and story-driven design.</p>
-                <a href="https://untilt.web.app" target="_blank">View project</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="contact">
-          <div class="contact-card reveal">
-            <div>
-              <p class="eyebrow">Let’s build something together</p>
-              <h2 class="gradient-text">Open to opportunities, collaborations, and new creative projects.</h2>
-            </div>
-            <div class="contact-links">
-              <a class="btn btn-secondary" href="mailto:hunganhho@cpp.com">Email</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/hung-anh-ho-18a386259/" target="_blank">LinkedIn</a>
-              <a class="btn btn-secondary" href="https://github.com/jimmyhanh" target="_blank">GitHub</a>
-            </div>
-          </div>
-        </section>
-      </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Hung Anh Ho, home">hh<span>®</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#projects" aria-current="location">Work</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-email" href="mailto:hunganhho@cpp.com">Let’s talk <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-kicker"><span>Hung Anh Ho</span><span>Developer / Programmer / AI enthusiast</span></div>
+        <h1 id="hero-title">CREATIVE<br /><span class="hero-second">DEVELOPER<span class="period">.</span></span></h1>
+        <div class="hero-bottom">
+          <p>Thoughtful design.<br />Brought to life with code.</p>
+          <a class="explore" href="#projects" aria-label="Explore selected work"><span>Explore</span><span aria-hidden="true">↓</span></a>
+          <p class="hero-note">Selected work<br /><span>Web development & UI design</span></p>
+        </div>
+      </section>
+      <section class="work-section" id="projects" aria-labelledby="work-title">
+        <div class="section-label"><h2 id="work-title">Selected work</h2><span>(01—03)</span></div>
+        <article class="project project-dental">
+          <a class="project-image" href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer" aria-label="Open Boston Dental Hub (new tab)">
+            <img src="Projects/Boston Dental Hub.png" alt="Boston Dental Hub website design" fetchpriority="high" />
+            <span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-caption"><span class="project-number">01 /</span><div><h3><a href="https://jimmyhanh.github.io/BostonDentalHub/" target="_blank" rel="noopener noreferrer">Boston Dental Hub ↗</a></h3><p>A modern web experience for a professional dental brand.</p></div><span class="project-category">UI design · Web development</span></div>
+        </article>
+        <div class="project-grid">
+          <article class="project project-pomodoro">
+            <a class="project-image" href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer" aria-label="Open Pomodoro Timer (new tab)"><img src="Projects/pomodoro.png" alt="Pomodoro Timer productivity app interface" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></a>
+            <div class="project-caption"><span class="project-number">02 /</span><div><h3><a href="https://jimmyhanh.github.io/Pomodoro-app/" target="_blank" rel="noopener noreferrer">Pomodoro Timer ↗</a></h3><p>A little structure. A lot more focus.</p><span class="project-category">JavaScript · Productivity</span></div></div>
+          </article>
+          <article class="project project-untilted">
+            <a class="project-image" href="https://untilt.web.app" target="_blank" rel="noopener noreferrer" aria-label="Open Untilted Therapy App (new tab)"><img src="Projects/untilted.png" alt="Untilted Therapy App wellness interface" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></a>
+            <div class="project-caption"><span class="project-number">03 /</span><div><h3><a href="https://untilt.web.app" target="_blank" rel="noopener noreferrer">Untilted Therapy App ↗</a></h3><p>A thoughtful digital space for wellness.</p><span class="project-category">Responsive design · Wellness</span></div></div>
+          </article>
+        </div>
+      </section>
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-label"><h2 id="about-title">A little about me</h2><span>(04)</span></div>
+        <div class="about-layout">
+          <div class="portrait"><img src="face.jpg" alt="Portrait of Hung Anh Ho" loading="lazy" /><span>Hung Anh Ho / Cal Poly Pomona</span></div>
+          <div class="about-copy"><h3>CURIOUS MIND.<br />HANDS-ON BUILDER.</h3><p>I’m Hung Anh Ho, a developer studying at Cal Poly Pomona. I build digital experiences that bring together code, design, and thoughtful problem-solving.</p><p>What started with hobby projects has grown into a focus on responsive websites, clean frontend logic, and research-backed ideas. Lately, I’m exploring AI tools and how they can help turn a good idea into something useful.</p><div class="stats"><div><strong>2+</strong><span>Years building</span></div><div><strong>10+</strong><span>Projects explored</span></div><div><strong>1</strong><span>Leadership role</span></div></div></div>
+        </div>
+      </section>
+      <section class="skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-label"><h2 id="skills-title">Tools & disciplines</h2><span>(05)</span></div>
+        <div class="skill-row"><h3>Technical</h3><p>Python / C & C++ / SQL / HTML / CSS / JavaScript</p></div>
+        <div class="skill-row"><h3>Focus</h3><p>Web development / UI design / Research / Leadership / AI</p></div>
+      </section>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-label"><p>Have something in mind?</p><span>(06)</span></div>
+        <h2 id="contact-title"><a href="mailto:hunganhho@cpp.com">LET’S TALK<span aria-hidden="true">↗</span></a></h2>
+        <div class="contact-bottom"><p>Open to opportunities, collaborations,<br />and new creative projects.</p><div class="contact-links"><a href="mailto:hunganhho@cpp.com">Email ↗</a><a href="https://www.linkedin.com/in/hung-anh-ho-18a386259/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/jimmyhanh" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+      </section>
     </main>
-
-    <div class="cats-container" aria-hidden="true"></div>
-
-    <footer class="footer">© 2026 Hung Anh Ho. Built with HTML, CSS, and a modern layout approach.</footer>
-
-    <script src="script.js"></script>
+    <footer><span>© 2026 Hung Anh Ho</span><div class="memorial"><img src="cat icon.png" alt="" loading="lazy" /><span>In loving memory of Kuro</span></div><a href="#home">Back to top ↑</a></footer>
   </body>
 </html>
