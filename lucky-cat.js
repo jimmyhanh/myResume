@@ -23,13 +23,13 @@ export function createLuckyCat() {
   // Rounded white ears with a flush, inset red face.
   const earShape = new THREE.Shape();
   earShape.moveTo(-.29,-.28);
-  earShape.bezierCurveTo(-.32,.05,-.2,.63,-.09,.67);
-  earShape.bezierCurveTo(.04,.72,.27,.18,.3,-.28);
+  earShape.bezierCurveTo(-.32,.08,-.22,.75,-.08,.85);
+  earShape.bezierCurveTo(.06,.75,.32,.08,.3,-.28);
   earShape.quadraticCurveTo(0,-.38,-.29,-.28);
   const earGeometry = new THREE.ExtrudeGeometry(earShape,{ depth:.14, bevelEnabled:true, bevelSegments:4, bevelSize:.035, bevelThickness:.025, curveSegments:24, steps:1 });
   for (const side of [-1,1]) {
     const ear = new THREE.Group(); ear.name = side < 0 ? 'lucky-left-ear' : 'lucky-right-ear';
-    ear.position.set(side*.51,1.27,-.055); ear.rotation.z = side * -.18;
+    ear.position.set(side*.51,1.28,-.055); ear.rotation.z = side * -.12;
     const shell = new THREE.Mesh(earGeometry,white); ear.add(shell);
     const insert = new THREE.Mesh(new THREE.ShapeGeometry(earShape,24),red);
     insert.scale.set(.72,.77,1); insert.position.set(0,.015,.166); ear.add(insert);
@@ -113,11 +113,11 @@ export function createLuckyCat() {
 
   // Viewer-left raised paw, with its wave confined outside the head silhouette.
   line([[-.4,-.5,.02],[-.67,-.27,.025],[-.88,.03,.035]],.16,white);
-  const wavingPaw=new THREE.Group();wavingPaw.name='waving-paw';wavingPaw.position.set(-.89,.03,.035);statue.add(wavingPaw);
-  oval(wavingPaw,white,[-.145,.13,.015],[.15,.28,.175]);
-  oval(wavingPaw,white,[-.19,.37,.04],[.18,.235,.19]);
-  oval(wavingPaw,pink,[-.19,.33,.225],[.066,.071,.014]);
-  for(const [x,y] of [[-.29,.43],[-.19,.51],[-.09,.46]]) oval(wavingPaw,pink,[x,y,.209],[.04,.047,.016]);
+  const wavingPaw=new THREE.Group();wavingPaw.name='waving-paw';wavingPaw.position.set(-.88,.03,.035);statue.add(wavingPaw);
+  oval(wavingPaw,white,[0,.13,.015],[.16,.29,.22]);
+  oval(wavingPaw,white,[-.045,.37,.04],[.2,.25,.24]);
+  oval(wavingPaw,pink,[-.045,.33,.225],[.08,.085,.025]);
+  for(const [x,y] of [[-.145,.43],[-.045,.51],[.055,.46]]) oval(wavingPaw,pink,[x,y,.209],[.048,.055,.022]);
   statue.scale.setScalar(.6);
   return { statue, wavingPaw };
 }

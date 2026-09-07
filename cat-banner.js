@@ -41,34 +41,51 @@ function createCat() {
   head.position.set(0, 0.65, 0.05);
   cat.add(head);
   oval(head, fur, [0, 0, 0], [0.88, 0.73, 0.66]);
-  // The pink inset is part of the ear's front surface, not a floating cone.
+  // Rounded, cupped ears: a continuous mesh joins the fur rim and pink interior.
+  const earOutline = new THREE.Shape();
+  earOutline.moveTo(-.3,-.3);
+  earOutline.quadraticCurveTo(0,-.38,.3,-.3);
+  earOutline.bezierCurveTo(.28,-.02,.13,.4,.035,.45);
+  earOutline.quadraticCurveTo(0,.48,-.035,.45);
+  earOutline.bezierCurveTo(-.13,.4,-.28,-.02,-.3,-.3);
+  const outline = earOutline.getSpacedPoints(64).slice(0,-1);
   const earGeometry = new THREE.BufferGeometry();
-  const front = [new THREE.Vector3(-.34, -.425, .15), new THREE.Vector3(.34, -.425, .15), new THREE.Vector3(0, .425, .015)];
-  const back = front.map((vertex) => new THREE.Vector3(vertex.x, vertex.y, -.2));
-  const center = front.reduce((sum, vertex) => sum.add(vertex), new THREE.Vector3()).divideScalar(3);
-  const inset = front.map((vertex) => vertex.clone().sub(center).multiplyScalar(.65).add(center));
-  const earVertices = [];
-  function earTriangle(a, b, c, materialIndex = 0) {
-    const start = earVertices.length / 3;
-    earVertices.push(...a.toArray(), ...b.toArray(), ...c.toArray());
-    earGeometry.addGroup(start, 3, materialIndex);
+  const vertices = [], furIndices = [], pinkIndices = [];
+  const rings = [[1,.025],[.88,.095],[.66,.03],[.34,-.025]];
+  const count = outline.length;
+  for (const [radius, depth] of rings) {
+    for (const point of outline) {
+      const y = -.06 + (point.y + .06) * radius;
+      vertices.push(point.x * radius, y, depth * (1 - Math.max(0,y) * .5));
+    }
   }
-  for (let i = 0; i < 3; i++) {
-    const next = (i + 1) % 3;
-    earTriangle(front[i], front[next], inset[next]);
-    earTriangle(front[i], inset[next], inset[i]);
-    earTriangle(front[i], back[i], back[next]);
-    earTriangle(front[i], back[next], front[next]);
+  for (let ring=0;ring<rings.length-1;ring++) {
+    const indices = ring < 2 ? furIndices : pinkIndices;
+    for (let i=0;i<count;i++) {
+      const next=(i+1)%count;
+      const a=ring*count+i,b=ring*count+next,c=(ring+1)*count+next,d=(ring+1)*count+i;
+      indices.push(a,b,c,a,c,d);
+    }
   }
-  earTriangle(inset[0], inset[1], inset[2], 1);
-  earTriangle(back[2], back[1], back[0]);
-  earGeometry.setAttribute('position', new THREE.Float32BufferAttribute(earVertices, 3));
+  const frontCenter=vertices.length/3;
+  vertices.push(0,-.06,-.04);
+  const backCenter=vertices.length/3;
+  vertices.push(0,-.06,-.15);
+  for (let i=0;i<count;i++) {
+    const next=(i+1)%count;
+    pinkIndices.push(3*count+i,3*count+next,frontCenter);
+    furIndices.push(next,i,backCenter);
+  }
+  earGeometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
+  earGeometry.setIndex([...furIndices,...pinkIndices]);
+  earGeometry.addGroup(0,furIndices.length,0);
+  earGeometry.addGroup(furIndices.length,pinkIndices.length,1);
   earGeometry.computeVertexNormals();
   for (const side of [-1, 1]) {
     const ear = new THREE.Mesh(earGeometry, [points, pink]);
     ear.name = side < 0 ? 'left-ear' : 'right-ear';
-    ear.position.set(side * 0.58, 0.65, 0);
-    ear.rotation.set(-0.1, 0, side * -0.22);
+    ear.position.set(side * 0.55, 0.61, 0.035);
+    ear.rotation.set(-0.08, side * 0.06, side * -0.16);
     head.add(ear);
     oval(head, points, [side * 0.35, 0.03, 0.51], [0.33, 0.32, 0.16]);
     oval(head, iris, [side * 0.35, 0.08, 0.646], [0.2, 0.23, 0.055]);
